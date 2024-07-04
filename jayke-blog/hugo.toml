@@ -1,0 +1,61 @@
+baseURL = 'https://jayke.nl/'
+languageCode = 'en-us'
+title = 'Jayke'
+theme = "hugo-blog-awesome"
+
+# This defines how dates are formatted
+defaultContentLanguage = "en-gb"
+
+enableEmoji = true
+enableRobotsTXT = true
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/jaykemeijer"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/jaykemeijer/"
+
+[params]
+goToTop = true
+defaultColor = "auto"
+description = "A place where Jayke may or may not jot down thoughts and highlight brainfarts"
+mainSections = ['posts']
+dateFormat = "Jan 2006"
+
+[params.author]
+avatar = "icon.png" # put the file in assets folder; also ensure that image has same height and width
+intro = "Jayke's thoughts"
+name = "Jayke Meijer"
+description = "A place where I may or may not jot down thoughts and highlight brainfarts"
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+[markup.highlight]
+noClasses = false
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+startLevel = 2 # ToC starts from H2
+endLevel = 4 # ToC ends at H4
+ordered = false # generates <ul> instead of <ol>
+
+[menu]
+[[menu.main]]
+# The page reference (pageRef) is useful for menu highlighting
+# When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+pageRef="/"
+name = 'Home'
+url = '/'
+weight = 10
+[[menu.main]]
+pageRef="posts"
+name = 'Posts'
+url = '/posts/'
+weight = 20
+[[menu.main]]
+pageRef="about"
+name = 'About'
+url = '/about/'
+weight = 30
