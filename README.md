@@ -10,13 +10,13 @@ This site uses [Hugo](https://gohugo.io) with the
 ### Run development server
 
 ```
-../bin/hugo server [--buildDrafts]
+hugo server [--buildDrafts]
 ```
 
 ### Create a new post
 
 ```
-../bin/hugo new content/posts/<name>.md
+hugo new content/posts/<name>.md
 ```
 
 ### Build a deployable page
