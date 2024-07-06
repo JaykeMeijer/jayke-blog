@@ -18,10 +18,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - name: Build
-        run: ls && hugo --minify
+        run: hugo --minify
         working-directory: ./jayke-blog
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
