@@ -142,4 +142,4 @@ that it's really easy to add or remove photos from the frame.
 ## Time for a break
 
 As I started writing, I realized I have a _lot_ to say about this project. We haven't even started on the exciting part!
-As the software side is done now, I'm going to leave the hardware part for a next post. To be continued.
+Since the software side is done now, I'm going to leave the hardware part for a next post. To be continued.
