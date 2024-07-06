@@ -41,7 +41,7 @@ Piece of cake.
 
 ## Modifying the code
 
-Lets start with the part that has the lowest barrier of entry (I'm slowly coming to graps with how my brain works):
+Lets start with the part that has the lowest barrier of entry (I'm slowly coming to grasps with how my brain works):
 Modify the code. I forked Berry's repository, and started experimenting. Naturally, the version I created is available
 as [open source](https://github.com/JaykeMeijer/drarwing_continuous), like the original. Read on to see the changes I
 made.
