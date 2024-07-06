@@ -7,7 +7,7 @@ keywords = ['electronics', 'code', 'open-source']
 [params]
   math = true
 +++
-Time for my first actual post! Let me tell you about my latest hobby project. This is a part 1 in a two-part series -
+Time for my first actual post! Let me tell you about my latest hobby project. This is part 1 in a two-part series -
 strap in!
 
 ## Drarwing
