@@ -15,9 +15,10 @@ jobs:
         with:
           hugo-version: '0.128.0'
           extended: true
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - name: Build
         run: ls && hugo --minify
