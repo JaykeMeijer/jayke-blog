@@ -2,6 +2,7 @@
 title = 'Hello, world!'
 date = 2024-07-04T20:14:07+02:00
 draft = false
+description = "Blogpost about my new blog"
 +++
 I figured it was time to
 
