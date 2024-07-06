@@ -3,7 +3,7 @@ title = 'Making virtual art physical - Part 1'
 date = 2024-07-06T13:54:52+02:00
 draft = false
 keywords = ['electronics', 'code', 'open-source']
-description = "A blog post on how I made virtual art physical. Part 2: software and small computers"
+description = 'A blog post on how I made virtual art physical. Part 2: software and small computers'
 
 [params]
   math = true
