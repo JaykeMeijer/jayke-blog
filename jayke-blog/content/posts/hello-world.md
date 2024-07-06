@@ -6,6 +6,7 @@ draft = false
 ## Hello, world!
 
 I figured it was time to
+
 1. do something with the jayke.nl domain that I've had for a long time
 2. play around with some static site generation tooling and
 3. create a place where I can jot down some of my thoughts, or indulge in shameless self-promotion over some of the
