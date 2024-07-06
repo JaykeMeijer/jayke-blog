@@ -1,10 +1,8 @@
 +++
-title = 'Hello World'
+title = 'Hello, world!'
 date = 2024-07-04T20:14:07+02:00
 draft = false
 +++
-## Hello, world!
-
 I figured it was time to
 
 1. do something with the jayke.nl domain that I've had for a long time
