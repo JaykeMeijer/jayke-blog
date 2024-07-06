@@ -1,0 +1,11 @@
+name: Deploy
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint markdown
+        uses: DavidAnson/markdownlint-cli2-action@v16
