@@ -61,7 +61,7 @@ The speed of the drawing was the next step. Since we'll be using low-powered har
 
 :star2:PROFILING:star2:
 
-(this might be a future blog topic). It immediately became clear that almost half the time was spent copying objects.
+(this might be a future blog topic). It immediately became clear that most of the runtime was spent copying objects.
 Some further investigation allowed me to cut this time down significantly, by decreasing the number of `deepcopy()`s
 required, and using `numpy`s built-in copy mechanism for the `ndarray`s containing the image data instead.
 [These changes](https://github.com/berryvansomeren/drarwing_web/pull/1/files) were also merged back to the original
@@ -74,16 +74,16 @@ strokes are sufficiently large that using a higher resolution does not improve t
 
 All this performance improvement means we now have the margin to use some more advanced scoring metrics. A scoring
 metric is used to determine how good a randomly placed brushstroke really is. This is determined by looping through all
-the pixels, and comparing how that pixel looks in the drawing versus the original image. This is then added up per pixel
-to determine how much the entire drawing looks like the original.
+the pixels, and comparing how that pixel looks in the drawing versus the original image. This is then added up for the
+entire image to determine how much the drawing looks like the original.
 
 In the original Drarwing, the difference between two pixels is simply taken as the absolute difference between their
 grayscale values. This works fine, because the canvas starts as white, meaning that the entire picture will get covered
 with some color closer to the target anyway.
 
 However, in this version the base canvas is not white, but it's the previous drawing. That causes some issues, as two
-colors that look completely similar in grayscale, may look completely different to us. This can lead to large areas of
-the image having the wrong color.
+colors that look completely similar in grayscale, may look completely different to us humans. This can lead to large
+areas of the image having the wrong color.
 
 To fix this, we can use something called the **ΔE metric**. This metric works in the
 [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space), which is specifically designed to represent how
@@ -111,18 +111,18 @@ and difference images:
 
 Of course, we can't keep running this application on a high-performance desktop machine. Ideally, the entire device will
 be self-contained, only needing power from the outside. So, we need a _small_ computer. In today's world, that means a
-Raspberry Pi. And as smaller is better in this case, I decided to go with a Raspberry Pi Zero 2 W. A bonus here is that
-this version has Wi-Fi included, which will be very convenient later on.
+Raspberry Pi. And as smaller (and especially flatter) is better in this case, I decided to go with a Raspberry Pi Zero
+2 W. A bonus here is that this version has Wi-Fi included, which will be very convenient later on.
 
 ### Keeping control
 
-The Raspberry Pi does have a limitation though: It does not have a power button. This is fine for devices used as an
+Raspberry Pis come with a limitation though: It does not have a power button. This is fine for devices used as an
 always-on server, or when running the device interactively. For this use-case however, it means it can't be shutdown
-properly. That leaves just pulling the power, which can lead to SD card corruption and a bricked Raspberry installation.
-Not ideal.
+properly. That leaves just pulling the power cable, which can lead to SD card corruption and a bricked Raspberry
+installation. Not ideal.
 
 So we need a solution. The Pi supports a "halt state", in which it is in a sort of deep-sleep state (and won't corrupt
-the storage when powered off). While in this state, if you short GPIO3 to ground, it will wake back up.
+the storage when powered off). While in this state, if you short the GPIO3 pin to ground, it will wake back up.
 
 So [the solution](https://howchoo.com/pi/how-to-add-a-power-button-to-your-raspberry-pi/) is simple: We add a button
 between GPIO3 and GND. This button can be used to power the Pi back up, and by adding a simple script that listens on
