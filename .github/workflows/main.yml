@@ -20,7 +20,7 @@ jobs:
           submodules: recursive  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - name: Build
-        run: hugo --minify
+        run: ls && hugo --minify
         working-directory: ./jayke-blog
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
