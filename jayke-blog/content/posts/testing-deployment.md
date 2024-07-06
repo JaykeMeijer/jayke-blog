@@ -6,3 +6,4 @@ draft = false
 This document will serve as a test for automatic deployment purposes.
 
 1. Initial attempt - can I deploy changes through GIT
+2. Testing full pipeline. Lets see if this change runs all the way through
