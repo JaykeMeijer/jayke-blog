@@ -142,9 +142,9 @@ the vertical dimension, yet too narrow on the horizontal. So I ordered passe-par
 cut the nice 45 degree bevels that passe-partouts have, and started cutting. I can proudly say I only needed 4 attempts
 to get this both fitting perfect ánd looking nice without jagged edges. I'm counting that as a win.
 
-Lastly, I wanted something to make the buttons looks special. Something that contrasts the white of the frame and that
-is the cherry on top to make the build look and feel professional. What would be really cool, is to use metal for this.
-Unfortunately, metal working is not (yet?) part of my skillset.
+Lastly, I wanted something to make the buttons looks special. Something that contrasts with the white of the frame and
+that is the cherry on top to make the build look and feel professional. What would be really cool, is to use metal for
+this. Unfortunately, metal working is not (yet?) part of my skillset.
 
 3D printing is, however! And as luck would have it, a few years ago I ordered a role of copper-infused filament. Having
 decided on this approach, I started printing a few pieces, and experimenting with how to sand and polish it to make it
